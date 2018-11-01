@@ -1,0 +1,43 @@
+//Write a C++ program to create a class named as Shape with private attributes x and y.
+ //Provide a public interface named as area() which would be overloaded to initialize these attributes and
+ //find out area of a square object or of a rectangle object and
+//displays the value at the console
+
+#include <iostream>
+using namespace std;
+
+class shape
+{
+    double x,y;
+    public:
+        double area(double x);
+        double area(double x,double y);
+};
+double shape::area(double a)
+{
+    double  l;
+    l = a;
+    double area1;
+    area1 = l*l;
+    return(area1);
+}
+double shape::area(double b,double c)
+{
+    double l , m;
+    l  = b;
+    m = c;
+    double area2;
+    area2 = l*m;
+    return(area2);
+}
+int main()
+{   shape s;
+    double a,b,c;
+    cout<<"enter the length of the side of the square = ";
+    cin>>a;
+    cout<<"Enter the length and breadth of the rectangle = ";
+    cin>>b>>c;
+    cout<<"Area of square is  = "<<s.area(a)<<endl;
+    cout<<"Area of rectangle is = "<<s.area(b,c)<<endl;
+    return 0;
+}
